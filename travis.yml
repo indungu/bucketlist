@@ -1,0 +1,12 @@
+language: python
+# What versions of python to test against
+python:
+  - "2.7-dev"
+  - "3.5"
+  - "3.6"
+  - "nightly"
+# Dependencies install
+  - pip install -r requirements.txt
+# Tests
+script:
+  python manage.py test api
