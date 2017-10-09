@@ -76,7 +76,7 @@ class ViewsTestCase(TestCase):
             reverse('details', kwargs={'pk': bucketlist.id}),
             change_bucketlist, format='json'
         )
-        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
 
     def test_api_can_delete_bucketlist(self):
         """Test the api's ability to delete a bucketlist"""
